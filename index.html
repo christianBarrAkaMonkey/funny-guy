@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#container {
+  width: 500px;
+  height:500px;
+  background-color: gray;
+  position:relative;
+}
+@keyframes inOut {
+  0% {
+    transform: scale(1)
+  }
+  25% {
+    transform: scale(2)
+  }
+  50% {
+    transform: scale(1)
+  }
+  75% {
+    transform: scale(.5)
+  }
+  100% {
+    stansform: scale(1)
+  }
+  
+}
+div#body {
+  animation: inOut 3s ease-in-out infinite;
+  width:100px;
+  height:100px;
+  background-image: radial-gradient(cyan, blue);
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  left:40%;
+  border: 1px solid black;
+}
+
+@keyframes spinClock {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  } 
+}
+
+div#head {
+  animation: spinClock 3s linear infinite;
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(orange, red);
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  border: 1px solid black;
+
+}
+
+@keyframes rockingArms{
+  0% {
+    transform: rotate(0deg)
+  }
+  25% {
+    transform: rotate(45deg)
+  }
+  50% {
+    transform: rotate(0deg)
+  }
+  75% {
+    transform: rotate(-45deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}
+
+div.arms {
+  width: 150px;
+  height: 25px;
+  background-image: linear-gradient(orange, yellow);
+  position: absolute;
+  border: 1px solid black;
+
+}
+
+div#arm1 {
+  animation: rockingArms 4s linear infinite;
+  left: 65%;
+  top: 40%;
+  
+}
+
+div#arm2 {
+  animation: rockingArms 3s linear infinite;
+  top: 40%;
+  left: 5%;
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(0px)
+  }
+  25% {
+    transform: translateX(30px)
+  }
+  50%{
+    transform: translateX(0px)
+  }
+  75% {
+    transform: translateX(-30px)
+  }
+  100% {
+    transform: translateX(0px)
+  }
+}
+
+div.legs {
+  width: 25px;
+  height: 200px;
+  border: 1px solid black;
+  background-image: linear-gradient(green, #39FF14);
+  position: absolute;
+}
+
+div#legs1 {
+  animation: sway 2s linear infinite;
+  top: 60%;
+  left: 40%
+}
+
+div#legs2 {
+  animation: sway 3s linear infinite;
+  top: 60%;
+  left: 55%;
+}
+
+@keyframes eyesOutIn {
+   0% {
+    transform: translateX(0px)
+  }
+  25% {
+    transform: translateX(5px)
+  }
+  50%{
+    transform: translateX(0px)
+  }
+  75% {
+    transform: translateX(-5px)
+  }
+  100% {
+    transform: translateX(0px)
+  }
+}
+
+div.eyes {
+  animation: eyesOutIn 2s linear infinite;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  border:1px solid black;
+}
+
+div#left-eye {
+  left: 45%;
+  top: 15%;
+  
+}
+
+div#right-eye {
+  top: 15%;
+  left: 50%
+}
+
+div.pupil {
+  width:5px;
+  height:5px;
+  background-color:black;
+  position: absolute;
+  border-radius:50%;
+  border: 1px solid black;
+  
+}
+
+div#pupil-left {
+  left: 46.5%;
+  top: 16.5%;
+  
+}
+
+div#pupil-right {
+  left: 51.5%;
+  top: 16.5%;
+    
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="head"></div>
+        <div class="eyes" id="left-eye"></div>
+        <div class="eyes" id="right-eye"></div>
+        <div class="pupil" id="pupil-left"></div>
+        <div class="pupil" id="pupil-right"></div>
+        <div class="arms" id='arm2'></div>
+        <div id="body"></div>
+        <div class="arms" id="arm1"></div>
+        <div class="legs" id="legs1"></div>
+        <div class="legs" id="legs2"></div>
+      </div>
+    <script></script>
+</body>
+</html>
